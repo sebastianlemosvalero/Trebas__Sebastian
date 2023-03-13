@@ -1,0 +1,31 @@
+{r BMI}
+BMI <- function(height, weigth){
+  
+  BMI = weigth /(height*height)
+  
+  print(paste("your BMI is: ", BMI))
+  
+}
+
+Name <- readline("Enter your name: ")
+ID <- readline("Enter your ID: ")
+
+height_m <- as.numeric(readline(paste(Name," enter your Height in centimiters: ")))/100
+Weight_ <- as.numeric(readline(paste(Name," enter your weight in Kg: ")))
+
+x <- BMI(height_m,Weight_)
+
+if (x<= 18.4){
+  print(paste(Name, "with ID: ",ID," you are underweight"))
+}else{
+  if(x <= 24.9 || x > 18.4){
+   print(paste(Name, "with ID: ",ID," you are normal")) 
+  }else{
+    if(x<=39.9 || x > 24.9){
+      print(paste(Name, "with ID: ",ID," you are overweight"))
+    }else{
+      print(paste(Name, "with ID: ",ID," you are obese"))
+    }
+  }
+}
+                  
